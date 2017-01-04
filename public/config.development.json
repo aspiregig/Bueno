@@ -1,0 +1,27 @@
+{
+  "css_includes" : [
+    "assets/css/bootstrap.min.css",
+    "assets/css/animate.css",
+    "assets/css/owl.carousel.css",
+    "assets/css/owl.theme.css",
+    "assets/css/select2.min.css",
+    "assets/css/datetimepicker.css",
+    "assets/css/bootstrap-slider.min.css",
+    "assets/css/style.css",
+    "assets/css/custom.css"
+  ],
+  "js_includes" : [
+    "assets/js/jquery-2.1.4.min.js",
+    "assets/js/datetimepicker.js",
+    "assets/js/bootstrap.min.js",
+    "assets/js/owl.carousel.min.js",
+    "assets/js/select2.min.js",
+    "assets/js/bootstrap-slider.min.js",
+    "assets/js/underscore.min.js",
+    "assets/js/noty.js",
+    "assets/js/main.js",
+    "assets/js/xprs_menu.js",
+    "assets/js/cart.js",
+    "assets/js/checkout.js"
+  ]
+}

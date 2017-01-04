@@ -1,0 +1,348 @@
+// ######################################## //
+// ## STATICPAGES.SCSS ## //
+// ######################################## //
+
+
+// Importing Variables
+@import "variables";
+
+
+// Universal Styles (for all static pages)
+.hero_section {
+	background: url('../images/hero_section_bg.jpg');
+	background-size: cover;
+}
+
+// Navigation for Static Pages
+.static_links_nav {
+	padding: 10px 0;
+	
+	// On Mobile and Tabs (P)
+	@media screen and (max-width: 991px) {
+		overflow: auto;
+	}
+
+	// Static Page Links
+	.static_page_links {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: table;
+
+		// On Mobile
+		@media screen and (max-width: 767px) {
+			padding: 6px 0;
+		}
+
+		li {
+			display: table-cell;
+
+			.btn-secondary {
+				padding: 2px 10px;
+				margin: 0 10px;
+
+				// If 'active' class is there
+				&.active {
+					opacity: 0.5;
+					box-shadow: none;
+				}
+			}
+
+			// Last Button Styling for Mobile devices
+			&:last-child {
+
+				// On Mobile & Tabs (P)
+				@media screen and (max-width: 991px) {
+					padding-right: 50px;
+				}
+			}
+		}
+	}
+}
+
+
+
+// Hero Sidebar
+.hero_sidebar {
+
+	.hero_features {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+
+		li {
+			border-bottom: 1px dashed $gray-x-dark;
+			padding: 8px 0 8px 3px;
+
+			h6 {
+				margin: 0;
+				font-size: 16px;
+				font-weight: bold;
+			}
+
+			p {
+				margin-bottom: 0;
+			}
+
+			a {
+				font-weight: normal;
+			}
+		}
+	}
+}
+
+
+
+// Static Page Section
+.static_page_sec {
+	padding-top: 0;
+	padding-bottom: 90px;
+
+	.well {
+		margin-bottom: 30px;
+
+		// On Mobile
+		@media screen and (max-width: 767px) {
+			margin-right: -15px;
+			margin-left: -15px;
+		}
+	}
+
+	.static_content {
+
+		// On Mobile
+		@media screen and (max-width: 767px) {
+			padding: 0;
+		}
+
+		.main {
+			
+			// On Mobile
+			@media screen and (max-width: 767px) {
+				margin-bottom: 50px;
+			}
+		}
+	}
+
+	a {
+		font-weight: bold;
+	}
+
+	h4 {
+		margin-top: 30px;
+		margin-bottom: 10px;
+
+		// On Mobile & Tabs
+		@media screen and (min-width: 768px) and (max-width: 991px) {
+			margin-top: 15px;
+		}
+	}
+
+	.panel-title {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+
+
+// About Page
+// Team
+.team {
+
+	.header {
+		margin: 30px 0 20px 0;
+	}
+	
+	// Accordian Panel Group -> Panel Heading
+	.panel-group .panel {
+		border: none;
+		box-shadow: none;
+	}
+	
+	// Accordian Panel Group -> Panel Heading
+	.panel-group .panel-heading {
+		padding: 15px 20px;
+	}
+
+	// Accordian Panel Group -> Panel Heading
+	.panel-group .panel-body {
+		padding: 20px 0;
+	}
+	
+	// Member Details
+	.member {
+		padding: 0;
+		
+		// Member Name
+		.name {
+			margin-top: 0;
+			padding: 0 20px 10px;
+			border-bottom: 1px dashed $gray-x-dark;
+			font-size: 16px;
+		}
+
+		// Member Description
+		.desc {
+			padding: 0 20px 25px;
+			margin: 0;
+		}
+	}
+}
+
+
+
+// Press Sec
+.press_sec {
+	
+	// Open Card
+	.open_card {
+		margin-bottom: 30px;
+	}
+}
+
+
+
+
+// FAQs Section
+.faq_sec {
+
+	.static_content {
+		padding: 0;
+	}
+
+	// Accordian Panel Group -> Panel Heading
+	.panel-group {
+		margin: 0;
+	}
+
+	// Accordian Panel Group -> Panel Heading
+	.panel-group .panel {
+		border-top: none;
+		border-right: none;
+		border-left: none;
+		border-bottom: 1px dashed $gray-x-dark;
+		box-shadow: none;
+	}
+	
+	// Accordian Panel Group -> Panel Heading
+	.panel-group .panel-heading {
+		border-right: none;
+		border-left: none;
+		border-bottom: none;
+		border-top: none;
+		background: transparent;
+		padding: 15px 20px;
+		text-transform: uppercase;
+	}
+
+	// Accordian Panel Group -> Panel Heading
+	.panel-group .panel-body {
+		border-top: 1px dashed $gray-x-dark !important;
+		padding: 20px 15px;
+	}
+}
+
+
+
+
+
+
+
+// Catering Enquiry Section
+.catering_enquiry_sec {
+
+	h4 {
+		font-size: 1.5em;
+	}
+
+	.border-block {
+		margin-bottom: 30px;
+		font-size: 1.6em;
+	}
+}
+
+
+
+
+// Corporate Orders Section
+.corporate_orders_sec {
+
+	h4 {
+		font-size: 1.4em;
+	}
+
+	.border-block {
+		margin-bottom: 30px;
+		font-size: 1.6em;
+	}
+}
+
+.note {
+	margin-top: 0;
+	background: $gray-light;
+	padding: 15px 0;
+}
+
+
+
+
+
+
+
+
+// Careers Sections
+.careers_sec {
+
+	h4 {
+		font-size: 1.3em;
+		line-height: 1.3em;
+	}
+
+	.txt-big {
+		font-size: 1.8em;
+
+		// On Mobile
+		@media screen and (max-width: 767px) {
+			font-size: 1.5em;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

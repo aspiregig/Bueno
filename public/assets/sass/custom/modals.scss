@@ -1,0 +1,193 @@
+// ######################################## //
+// ## MODALS.SCSS ## //
+// ######################################## //
+
+
+// Importing Variables
+@import "variables";
+
+
+// Black Modal Styles
+
+.black_modal {
+
+	.modal-dialog {
+
+		// On Tabs and Desktops
+		@media screen and (min-width: 768px) {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) !important;
+			margin: 0;
+			transition: transform .3s ease-out;
+		}
+
+		// On Mobile
+		@media screen and (max-width: 767px) {
+			margin: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.modal-content {
+		border-radius: 30px;
+		background-color: $gray-x-dark;
+		color: rgba($white, 0.8);
+
+		// On Mobile
+		@media screen and (max-width: 767px) {
+			border-radius: 0;
+			width: 100%;
+			height: 100%;
+		}
+		
+		// All Selects Styles
+		select {
+			color: $gray-x-dark;
+		}
+		
+		// All Textual content
+		h1, h2, h3, h4, h5, p {
+			font-weight: 300;
+		}
+
+		// Inputs
+		.bueno_inputtext {
+			background-color: $white;
+			border-color: $white;
+			color: $gray-x-dark;
+			font-size: 1em;
+			padding: 10px 12px;
+		}
+
+		// <a> Link Styles
+		a {
+			color: $white;
+
+			&:hover,
+			&:active,
+			&:focus {
+				color: rgba($white, 0.7);
+			}
+		}
+
+		// Large Links
+		.large_link {
+			font-size: 1.5em;
+		}
+
+		.modal-header {
+			padding: 40px 80px 25px;
+			border-bottom: none;
+
+			// On Mobile
+			@media screen and (max-width: 767px) {
+				padding: 25px;
+			}
+
+			.header_icon {
+
+				i {
+					font-size: 4em;
+				}
+			}
+
+			.icon_circle {
+				border-radius: 50%;
+				border: 1px solid;
+				width: 60px;
+				height: 60px;
+				margin: 0 auto;
+				margin-bottom: 15px;
+				position: relative;
+
+				i {
+					font-size: 2.5em;
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+		}
+
+		.close {
+			position: absolute;
+			right: 20px;
+			top: 5px;
+			color: $white;
+			opacity: 0.7;
+			text-shadow: none;
+			font-size: 4em;
+			line-height: 0;
+			margin-top: 0;
+			margin-right: 0;
+
+			&:hover,
+			&:active,
+			&:focus {
+				opacity: 1;
+				outline: none;
+			}
+		}
+
+		// Modal Header
+		.modal-body {
+			padding: 10px 80px 60px;
+			border-bottom: none;
+
+			// On Mobile
+			@media screen and (max-width: 767px) {
+				padding: 25px;
+			}
+		}
+
+		// Modal Footer
+		.modal-footer {
+			padding: 10px 80px 40px;
+			border-top: none;
+
+			// On Mobile
+			@media screen and (max-width: 767px) {
+				padding: 25px;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+// Add Address Modal
+#addAddressModal {
+
+	input[type="submit"] {
+		padding: 12px 30px 13px 30px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,99 @@
+// ######################################## //
+// ## VARIABLES.SCSS ## //
+// ######################################## //
+
+// Placeholder Mixin
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+};
+
+// Black (Gray) Color Shades
+$white: #FFFFFF;
+$gray-bg: #EEEEEE;
+$gray-light: #D9D9D9;
+$gray-dim: #BDBDBD;
+$gray-normal: #A7A9AC;
+$gray-dark: #6A7276;
+$gray-x-dark: #231F20;
+$black: #000000;
+
+// Blue Color Shades
+$blue-bg: #D3E6F1;
+$blue-light: #BBDEFB;
+$blue-dim: #34ABE8;
+$blue-normal: #138BD8;
+$blue-x-dark: #004C63;
+
+$header-bg-color: #EC8F3B;
+
+$error-red: #A94442;
+
+// Yellow Shades (used in carousel graphic - CPP page)
+$yellow-normal: #F6D310;
+
+
+// Material Color Shades
+$material-red-bg: rgba(#FF8A80, 0.3);
+$material-red: #F44336;
+$material-red-dark: #B71C1C;
+
+$material-green-bg: #B9F6CA;
+$material-green: #388E3C;
+$material-green-dark: #1B5E20;
+
+$material-pink-bg: #F8BBD0;
+$material-pink: #E91E63;
+$material-pink-dark: #AD1457;
+
+
+// -----------------------------
+// Shades used on Pricing Tables
+// -----------------------------
+
+// Purple Shades
+$purple-light: #E1DDEE;
+$purple-normal: #8976BC;
+
+// Green Shades
+$green-light: #D3EDE3;
+$green-normal: #50B890;
+
+// Sky Blue Shades
+$skyblue-light: #CCE6F8;
+$skyblue-normal: #359BE3;
+
+// Orange Shades
+$orange-light: #FBECDD;
+$orange-normal: #EEB477;
+
+
+// -----------------------------
+// Colors for Social Icons
+// -----------------------------
+
+// Facebook Color
+$color-facebook: #3A57A1;
+
+// Twitter Color
+$color-twitter: #21CBFF;
+
+// Linkedin Color
+$color-linkedin: #0084B0;
+
+// Youtube Color
+$color-youtube: #E32C26;
+
+// Google Plus Color
+$color-gplus: #E32C26;
+
+// Pinterest Color
+$color-pinterest: #E32C26;
+
+// Instagram Color
+$color-instagram: #2E659B;
+
+// Whatsapp Color
+$color-whatsapp: #62BE4E;

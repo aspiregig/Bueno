@@ -1,0 +1,207 @@
+// ######################################## //
+// ## XPRSMENU.SCSS ## //
+// ######################################## //
+
+
+// Importing Variables
+@import "variables";
+
+
+
+// Xprs Menu Listing Section
+.xprs_menu_listing_sec {
+	padding: 0 0 30px;
+}
+
+
+// Hot Deals Listing Section
+.filters {
+
+	// On Mobile & Tabs
+	@media screen and (max-width: 991px) {
+		padding: 0;
+		border: 1px solid $gray-x-dark;
+		margin-bottom: 30px;
+	}
+
+	// Filter UL
+	.filter_ul {
+		list-style: none;
+		padding: 0 15px;
+
+		// Filter Option
+		&.filter_option {
+			padding: 10px 15px 7px;
+			border-bottom: 1px solid $gray-x-dark;
+
+			.holder {
+				margin: 0;
+				display: block;
+				border: none;
+				position: relative;
+
+				i {
+					position: absolute;
+					font-size: 2em;
+					top: -9px;
+					right: 1px;
+				}
+			}
+		}
+
+		li.checkbox_holder {
+			position: relative;
+			border-bottom: 1px dashed $gray-x-dark;
+			padding-bottom: 10px;
+			margin-bottom: 5px;
+
+			&.clear_all {
+				margin-bottom: 15px;
+				border-bottom: 1px solid;
+			}
+
+			label {
+				margin: 0;
+				width: 100%;
+
+				.txt {
+					display: block;
+					margin-top: 5px;
+				}
+			}
+
+			.inputcheckbox {
+				position: absolute;
+				margin: 0;
+				top: 0;
+				right: 15px;
+
+				& + .check_style:before {
+					content: '\f401';
+					font-size: 2em;
+					line-height: 1.05em;
+				}
+			}
+
+			.inputcheckbox:checked {
+
+				& + .check_style:before {
+					content: '\f405';
+					font-size: 2em;
+					line-height: 1.05em;
+				}
+			}
+		}
+
+		// Select Holder
+		li.filter_li {
+			padding: 10px 0;
+			
+			// Full Width select Container
+			.select2-container {
+				width: 100% !important;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+// Extra Filters
+.extra_filters {
+	padding: 0 10px;
+
+	// On Mobile
+	@media screen and (max-width: 767px) {
+		padding: 0;
+	}
+
+	// Bueno Input Group
+	.bueno_inputgroup {
+
+		// On Mobile & Tabs
+		@media screen and (max-width: 991px) {
+			margin-top: 15px;
+		}
+
+		input[type="text"] {
+			padding: 6px 12px;
+		}
+
+		.input-group-btn .btn {
+			padding: 5px 12px;
+
+			i {
+				font-size: 1.5em;
+			}
+		}
+	}
+	
+	// On Mobile
+	@media screen and (max-width: 767px) {
+
+		// Filter Sort
+		.filter_sort {
+			padding-left: 0;
+			padding-right: 5px;
+		}
+
+		// Filter Category
+		.filter_category {
+			padding-left: 5px;
+			padding-right: 0;
+		}
+
+		// Filter Search
+		.filter_search {
+			padding: 0;
+		}
+	}
+}
+
+
+
+// Xprs Menu (Page Listing)
+.listing_xprs_menu {
+	
+	// On Mobile
+	@media screen and (max-width: 767px) {
+		padding: 0;
+	}
+
+	// On Desktop
+	@media screen and (min-width: 1025px) {
+		padding-right: 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

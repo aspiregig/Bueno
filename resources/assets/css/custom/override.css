@@ -1,0 +1,165 @@
+* {
+  font-family: 'Roboto', 'Helvetica Neue', 'sans-serif';
+}
+
+*::selection {
+  background: #6A7276;
+  color: #FFFFFF;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  margin-top: 3px;
+}
+
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #A7A9AC;
+  background: #fff;
+  border-radius: 3px;
+}
+
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 6px;
+  background: transparent;
+  top: 6px;
+  left: 4px;
+  border: 3px solid #138BD8;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg) !important;
+  transition: all 0.2s;
+}
+
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #6A7276;
+  background-color: #BDBDBD;
+}
+
+[type="checkbox"]:disabled:checked + label:after {
+  color: #A7A9AC;
+}
+
+[type="checkbox"]:disabled + label {
+  color: #D9D9D9;
+}
+
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px solid #138BD8;
+}
+
+/* hover style just for information */
+label:hover:before {
+  border: 1px solid #138BD8 !important;
+}
+
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+  outline: none !important;
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 960px !important;
+  }
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-primary {
+  background-color: rgba(19, 139, 216, 0.8);
+  color: #fff;
+  padding: 8px 30px;
+  border: 2px solid #138BD8;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: #138bd8;
+  color: #fff;
+  border: 2px solid #138BD8;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #138BD8;
+  padding: 8px 30px;
+  border: 2px solid #138BD8;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active,
+.btn-secondary:focus {
+  background-color: transparent;
+  color: #60b8f1;
+  border: 2px solid #60b8f1;
+  transition: all 0.3s ease 0s;
+}
+
+a {
+  color: #138BD8;
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #34ABE8;
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+}
+
+.btn.disabled,
+.btn[disabled] {
+  opacity: 0.45 !important;
+}

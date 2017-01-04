@@ -1,0 +1,123 @@
+// ######################################## //
+// ## CATERING.SCSS ## //
+// ######################################## //
+
+
+// Importing Variables
+@import "variables";
+
+
+// Hot Deals Listing Section
+.catering_sec {
+	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url('../images/catering/catering_bg.jpg');
+	background-size: cover;
+	background-position: center;
+
+	// On Mobile
+	@media screen and (max-width: 767px) {
+		padding-top: 40px;
+	}
+
+	// Catering Menu Sec
+	.catering_menu_sec {
+		display: block !important;
+		padding: 40px 0 100px;
+		background: transparent;
+
+		// On Mobile
+		@media screen and (max-width: 767px) {
+			padding-top: 0;
+		}
+
+		.catering_menu {
+
+			// On Mobile
+			@media screen and (max-width: 767px) {
+				padding: 0;
+			}
+		}
+
+		.catering_menu_left {
+			vertical-align: top;
+
+			@media screen and (min-width: 992px) {
+				padding: 0 20px;
+			}
+
+			h4 {
+				font-size: 1.5em;
+				line-height: 1.5em;
+				font-weight: normal;
+				
+				// On Mobile
+				@media screen and (max-width: 767px) {
+					font-size: 1.2em;
+					line-height: 1.2em;
+					text-align: center;
+				}
+			}
+		}
+
+		// Border Block
+		.border-block {
+			font-size: 1.3em;
+			background: rgba($white, 0.4);
+		}
+
+		// Buttons
+		.btn {
+			
+			// On Desktops
+			@media screen and (min-width: 1025px) {
+				font-size: 1.4em;
+				padding: 10px 15px;
+			}
+		}
+	}
+}
+
+
+
+// Catering Query Section
+.catering_query {
+	background: transparent;
+	padding-top: 30px;
+
+	// Catering Menu Sec
+	.catering_menu_sec {
+		padding-top: 0;
+	}
+
+	.catering_menu {
+		color: $gray-x-dark;
+		
+		// Left Sec
+		.catering_menu_left {
+			color: $gray-x-dark;
+		}
+		
+		// Right Sec
+		.catering_menu_right {
+			color: $gray-x-dark;
+			vertical-align: top;
+
+			@media screen and (min-width: 992px) {
+				padding-left: 40px;
+			}
+
+			.border-block {
+				color: $gray-x-dark;
+				border-color: $gray-x-dark;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+

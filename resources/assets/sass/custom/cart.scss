@@ -1,0 +1,335 @@
+// ######################################## //
+// ## CART.SCSS ## //
+// ######################################## //
+
+
+// Importing Variables
+@import "variables";
+
+
+// Cart Section
+.cart_sec {
+	padding-top: 0;
+	
+	// Big Buttons
+	.big_btn {
+		padding: 12px;
+	}
+}
+
+
+// Cart Table Responsive
+.cart_table_responsive {
+
+	// On Mobile and Tabs
+	@media screen and (max-width: 991px) {
+		box-shadow: inset -25px 0px 25px -25px rgba(0, 0, 0, 0.3);
+	}
+}
+
+
+// Cart Table
+.cart_table {
+	border: none;
+
+	.noborder {
+		border: none !important;
+	}
+
+	// Table Header
+	thead {
+		background: $gray-x-dark;
+		color: $white;
+	}
+
+	// Heading
+	th {
+		border-bottom: 0 !important;
+		padding: 15px 30px !important;
+		font-size: 1.2em;
+		text-transform: uppercase;
+		font-weight: normal;
+	}
+
+	// Data
+	td {
+		padding: 15px !important;
+	}
+
+	// Heading (Label)
+	.heading {
+		font-weight: bold;
+		font-size: 15px;
+
+		em {
+			font-weight: normal;
+			color: $gray-dark;
+		}
+	}
+
+	// Product (Meal) Detail
+	.product_detail {
+		width: 650px;
+		padding-top: 20px !important;
+		padding-bottom: 20px !important;
+		
+		// On Mobile & Tabs
+		@media screen and (max-width: 991px) {
+			width: 400px;
+
+			.sec_table {
+
+				.sec_table_cell {
+					display: table-row !important;
+				}
+
+				.details_holder {
+					margin-top: 20px;
+
+					.title {
+						width: 100%;
+					}
+				}
+			}
+		}
+		
+		// Product Image
+		.image {
+			max-width: 240px;
+			padding: 0 15px 0 10px;
+		}
+		
+		// Product Details
+		.details {
+			vertical-align: bottom !important;
+
+			// Details Holder
+			.details_holder {}
+			
+			// Produc Title
+			.title {
+				margin-top: 0;
+				font-size: 16px;
+				margin-bottom: 20px;
+				line-height: 20px;
+				width: 200px;
+			}
+
+			// Action Container
+			.action_container {
+				padding: 0;
+
+				// Button Section
+				.btn_sec {
+					width: 150px;
+					padding: 0;
+
+					// On Mobile
+					@media screen and (max-width: 767px) {
+						width: 100%;
+					}
+				}
+
+				// Alert Section
+				.alert_sec {
+					width: calc(100% - 150px);
+					padding-right: 0;
+
+					// On Mobile
+					@media screen and (max-width: 767px) {
+						width: 100%;
+						padding: 0;
+						margin-top: 10px;
+					}
+
+					// Help Block
+					.help-block {
+						font-size: 12px;
+					}
+				}
+			}
+
+			// Buttons
+			.btn {
+				padding: 4px 12px;
+				font-size: 12px;
+				width: 100%;
+			}
+
+			// Info Icon Button
+			.btn.icon {
+
+				i {
+					font-size: 1.25em;
+					line-height: 1.7em;
+					right: 10px;
+				}
+			}
+		}
+	}
+
+	// Product Quantity
+	.product_quantity {
+		text-align: center;
+		width: 160px;
+		padding-top: 50px !important;
+
+		.bueno_inputtext {
+			text-align: center;
+			padding: 8px 12px 8px 26px;
+			width: 100px;
+			color: $gray-x-dark;
+		}
+	}
+
+	// Product Rate
+	.product_rate {
+		text-align: center;
+		width: 120px;
+		padding-top: 60px !important;
+
+		.price {
+			font-weight: bold;
+			font-size: 16px;
+		}
+	}
+
+	// Product Price
+	.product_price {
+		text-align: center;
+		width: 120px;
+		padding-top: 60px !important;
+
+		.price {
+			font-weight: bold;
+			font-size: 16px;
+		}
+	}
+
+	// Product Delivery
+	.product_delivery {
+		width: 405px;
+		padding-bottom: 40px !important;
+		border-bottom: none !important;
+
+		// Check Options
+		.check_options {
+
+			.checkbox {
+				margin-bottom: 20px;
+			}
+		}
+
+		.btn {
+			display: block;
+		}
+	}
+
+	// Product Extras
+	.product_extras {
+		width: 405px;
+		vertical-align: middle;
+		border-bottom: none !important;
+		border-right: none !important;
+
+		// Donation
+		.donation {
+			padding: 0 0 15px 0;
+			border-bottom: 1px dashed $gray-x-dark;
+		}
+
+		// Apply Coupon
+		.apply_coupon {
+			padding: 15px 20px;
+			border-bottom: 1px dashed $gray-x-dark;
+		}
+
+		// Credits
+		.credits {
+			padding: 30px 20px;
+		}
+	}
+
+	// Product Total Label
+	.product_total {
+		width: 240px;
+		border-bottom: none !important;
+		border-left: none !important;
+		padding-top: 0 !important;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+
+		// Total Heading
+		.total_heading {
+			width: 50%;
+			display: inline-block;
+			font-weight: bold;
+			text-align: center;
+			white-space: normal;
+			padding: 15px 5px;
+			margin: 0;
+			border-bottom: 1px dashed $gray-x-dark;
+			border-right: 1px dashed $gray-x-dark;
+			border-left: 1px dashed $gray-x-dark;
+		}
+
+		// Total Heading
+		.total_content {
+			width: calc(50% - 4px);
+			display: inline-block;
+			font-weight: bold;
+			text-align: center;
+			white-space: normal;
+			padding: 15px 5px;
+			margin: 0;
+			border-bottom: 1px dashed $gray-x-dark;
+		}
+
+		.btn {
+			display: block;
+		}
+	}
+}
+
+
+// Bordered Table Hack (Cart Table)
+.table-bordered.cart_table>tbody>tr>td, .table-bordered.cart_table>tfoot>tr>td, .table-bordered.cart_table>thead>tr>td {
+	border: 1px dashed $gray-x-dark;
+}
+.table-bordered.cart_table>tbody>tr:first-child>td {
+	border-top: none;
+}
+.table-bordered.cart_table>tbody>tr>td:first-child {
+	border-left: none;
+	border-top: none;
+}
+.table-bordered.cart_table>tbody>tr>td:last-child {
+	border-right: none;
+	// border-top: none;
+}
+// Bordered Table Hack (Cart Table) <th>
+.table-bordered.cart_table>tbody>tr>th, .table-bordered.cart_table>tfoot>tr>th, .table-bordered.cart_table>thead>tr>th {
+	border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

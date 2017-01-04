@@ -1,0 +1,8 @@
+{
+  "css_includes" : [
+   "/css/all.css"
+  ],
+  "js_includes" : [
+   "/js/all.js"
+  ]
+}

@@ -1,0 +1,262 @@
+// ######################################## //
+// ## ACCOUNTS.SCSS ## //
+// ######################################## //
+
+
+// Importing Variables
+@import "variables";
+
+
+// Account Section Form Styles
+.account_sec {
+
+	// On Mobile and Tabs
+	@media screen and (max-width: 991px) {
+		padding: 0;
+		margin-bottom: 80px;
+	}
+	
+	// Facebook
+	.signup_with_fb {
+		text-align: left;
+		padding-left: 100px;
+		text-transform: capitalize;
+
+		// On Mobile
+		@media screen and (max-width: 767px) {
+			padding-left: 60px;
+		}
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: $color-facebook;
+			border-color: $color-facebook;
+		}
+	}
+
+	// Google+
+	.signup_with_gplus {
+		text-align: left;
+		padding-left: 100px;
+		text-transform: capitalize;
+
+		// On Mobile
+		@media screen and (max-width: 767px) {
+			padding-left: 60px;
+		}
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: $color-gplus;
+			border-color: $color-gplus;
+		}
+	}
+}
+
+
+
+// Forgot Password Section
+.forgot_pass_sec {
+
+	.style_header_loud {
+
+		@media screen and (min-width: 1025px) {
+			font-size: 8em;
+		}
+	}
+}
+
+
+
+// My Account Section
+.my_account_sec {
+	
+	// Title Section (Right Section)
+	.title_sec .right-sec {
+		text-align: right;
+
+		// On Mobile and Tabs (P)
+		@media screen and (max-width: 991px) {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		// <em> tags
+		em {
+			font-style: normal;
+		}
+
+		.lines a {
+			text-transform: uppercase;
+
+			// Where class is active - text is bold
+			&.active {
+				font-weight: bold;
+			}
+		}
+	}
+
+	// Form Text (Rendered)
+	.form_txt {
+		font-size: 1.2em;
+		padding-left: 10px;
+		margin-bottom: 20px;
+	}
+
+
+	// Delivery Address Form (when form added)
+	#addAddressFormHolder .delivery_address {
+		padding: 20px 15px 10px;
+		border: 1px solid $gray-x-dark;
+	}
+}
+
+
+
+
+// Bueno Loyalty Section
+.loyalty_sec {
+
+	// Plans
+	.plans {
+		padding: 40px 25px;
+
+		// On Mobile
+		@media screen and (max-width: 767px) {
+			padding: 40px 0;
+		}
+
+		// Refer Section (Left)
+		.refer {
+			border: 1px dashed $gray-x-dark;
+			padding: 0;
+			
+			// On Mobile and Tabs
+			@media screen and (max-width: 991px) {
+				margin-bottom: 60px;
+			}
+
+			.bueno_form {
+				padding: 15px;
+			}
+
+			.border-block {
+				font-size: 1.6em;
+			}
+		}
+
+		// Membership Section Holder (Right)
+		.membership_holder {
+			padding: 0;
+		}
+		
+		// Membership Panels
+		.membership {
+			padding: 0;
+			margin-bottom: 30px;
+
+			.well {
+				margin: 0;
+			}
+
+			.border-block {
+				margin: 0;
+				border-top: none;
+				border-bottom: none;
+			}
+
+			// Panels
+			.panel {
+
+				.panel-heading {
+					border: none;
+					background-color: $white;
+
+					a {
+						display: block;
+						font-weight: normal;
+					}
+				}
+			}
+
+			.panel.dashed>.panel-heading+.panel-collapse>.panel-body {
+				border-top-style: dashed;
+			}
+		}
+	}
+}
+
+
+// Bottom Action Bar
+.bottom_action_bar {
+	border-top: 1px dashed $gray-x-dark;
+	border-bottom: 1px dashed $gray-x-dark;
+	padding: 30px 15px;
+	margin-top: 20px;
+
+	// First Button
+	.first {
+		padding-left: 0;
+		margin-bottom: 0;
+
+		// On Mobile
+		@media screen and (max-width: 767px) {
+			padding: 0;
+			margin-bottom: 20px;
+		}
+	}
+
+	// Second Button
+	.second {
+		padding-right: 0;
+
+		// On Mobile
+		@media screen and (max-width: 767px) {
+			padding: 0;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Order History Section
+.order_history_sec {
+
+	table.order_history {
+
+		tr {
+			border-bottom: 1px solid dashed $gray-x-dark;
+		}
+
+		td {
+			padding: 20px 15px !important;
+			border-top: none !important;
+			border-bottom: 1px dashed $gray-x-dark !important;
+
+			a {
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,1702 @@
+// ######################################## //
+// ## ALLPAGES.SCSS ## //
+// ######################################## //
+
+
+// Importing Variables
+@import "variables";
+
+
+
+
+// All Sections
+section {
+  padding: 30px 0;
+}
+
+
+
+
+// Empty Cart Message
+.dropdown-menu {
+
+  .txt {
+    font-size: 16px;
+    margin: 12px;
+    text-align: center;
+  }
+}
+
+
+
+// Placeholder Message
+.placeholder_message {
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+// Headers, Paras (Global Styles)
+// Besom Font Header
+.style_header {
+  margin: 0;
+  font-family: 'Besom';
+  font-size: 6em;
+  line-height: 0.8em;
+  padding-top: 12px;
+
+  // On Mobile
+  @media screen and (max-width: 768px) {
+    padding-top: 0;
+    font-size: 4em;
+  }
+
+  // On Tabs
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    font-size: 4.5em;
+  }
+}
+
+// Besom Font Header (Loud)
+.style_header_loud {
+  margin: 0;
+  font-family: 'Besom';
+  font-size: 10em;
+  line-height: 0.9em;
+  padding-top: 18px;
+  letter-spacing: -4px;
+
+  // On Mobile
+  @media screen and (max-width: 767px) {
+    padding-top: 0;
+    font-size: 5em;
+  }
+
+  // On Tabs
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    font-size: 8.5em;
+  }
+}
+
+// Normal Header
+.normal_header {
+  margin: 0;
+}
+
+// Besom Font Header
+.style_para {
+  margin: 0;
+  font-family: 'Besom';
+}
+
+// Normal Para
+.normal_para {
+  margin: 0;
+  
+  &.lines {
+
+    em {
+      display: block;
+      
+      // On Mobile and Tabs
+      @media screen and (max-width: 991px) {
+        display: inline-block;
+
+        &:after {
+          content: '/';
+          padding: 0 2px 0 4px;
+        }
+
+        &:last-child:after {
+          content: '';
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+// Section Classes (Left & Right)
+// Left Section
+.left-sec {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0;
+  float: none;
+  text-align: left;
+
+  // On Mobile/Tabs
+  @media screen and (max-width: 991px) {
+    float: left;
+    text-align: center;
+    display: block;
+  }
+}
+
+// Right Section
+.right-sec {
+  display: table-cell;
+  vertical-align: middle;
+  float: none;
+  text-align: left;
+
+  // On Mobile/Tabs
+  @media screen and (max-width: 991px) {
+    float: left;
+    text-align: center;
+    display: block;
+  }
+}
+
+
+
+
+// Owl Carousel (Global)
+.carousel_global {
+
+  // On Tabs
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    padding: 0 40px;
+  }
+}
+
+
+
+// Owl Carousel (Header)
+.header_carousel {
+
+  // Carousel BG Image
+  .carousel_bg_image {
+    position: relative;
+    height: 470px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    // On Mobile
+    @media screen and (max-width: 767px) {
+      height: 300px;
+    }
+
+    // On X-Large Screens ( >= 2K, 4K)
+    @media screen and (min-width: 1440px) {
+      height: 580px;
+    }
+
+    .container,
+    .row,
+    .col-xs-12 {
+      height: inherit;
+    }
+  }
+
+  // Carouel Content
+  .carousel_caption {
+    position: absolute;
+    padding-left: 0;
+    bottom: 35px;
+    width: 600px;
+    color: $white;
+
+    // On Tabs
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      padding-left: 100px;
+      bottom: 70px;
+    }
+
+    // On Mobile
+    @media screen and (max-width: 767px) {
+      padding-left: 20px;
+      bottom: 50px;
+      width: calc(100% - 50px);
+    }
+
+    // On X-Large Screens ( >= 2K, 4K)
+    @media screen and (min-width: 1440px) {
+      padding-left: 0;
+      bottom: 70px;
+    }
+
+    // Carousel Title
+    .carousel_title {
+      font-family: 'Besom';
+      font-size: 10em;
+      text-shadow: 3px 3px rgba($black, 0.5);
+      line-height: 0.8em;
+      margin: 0;
+
+      // On Mobile
+      @media screen and (max-width: 767px) {
+        font-size: 5em;
+      }
+    }
+
+    // Carousel Description
+    .carousel_desc {
+      text-shadow: 1px 1px rgba($black, 0.5);
+
+      // On Mobile
+      @media screen and (max-width: 767px) {
+        font-size: 0.8em;
+      }
+    }
+  }
+
+  // Owl Controls
+  .owl-controls {
+    margin: 0 !important;
+  }
+
+  .owl-controls .owl-page span {
+    background: $black;
+    margin: 4px;
+    width: 15px;
+    height: 15px;
+  }
+
+  .owl-controls .owl-page.active span,
+  .owl-controls.clickable .owl-page:hover span {
+    background: $white;
+  }
+
+  // Owl Pagination (Dots)
+  .owl-pagination {
+    position: absolute;
+    right: 15%;
+    bottom: 5%;
+  }
+
+  // Owl Buttons (Prev, Next)
+  .owl-buttons {
+    
+    // Prev, Next Button
+    .owl-prev,
+    .owl-next {
+      position: absolute;
+      background: transparent !important;
+
+      i {
+        font-size: 6em;
+        color: rgba($white, 0.7);
+
+        // On Mobile
+        @media screen and (max-width: 767px) {
+          font-size: 3em;
+        }
+      }
+    }
+
+    // Previous Button
+    .owl-prev {
+      left: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    // Next Button
+    .owl-next {
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+
+
+
+
+
+// Owl Buttons (Prev, Next) - (GLOBAL)
+.owl-buttons {
+
+  // On Mobile
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  
+  // Prev, Next Button
+  .owl-prev,
+  .owl-next {
+    position: absolute;
+    background: transparent !important;
+
+    i {
+      font-size: 4em;
+      color: $gray-x-dark;
+
+      // On Mobile
+      @media screen and (max-width: 767px) {
+        font-size: 3em;
+      }
+    }
+  }
+
+  // Previous Button
+  .owl-prev {
+    left: -50px;
+    top: 45%;
+    transform: translateY(-50%);
+
+    // On Mobile/Tabs
+    @media screen and (max-width: 991px) {
+      left: -10px;
+    }
+  }
+
+  // Next Button
+  .owl-next {
+    right: -50px;
+    top: 45%;
+    transform: translateY(-50%);
+
+    // On Mobile/Tabs
+    @media screen and (max-width: 991px) {
+      right: -10px;
+    }
+  }
+}
+
+
+
+
+
+// Highlight Section
+.highlight_sec {
+  background: $yellow-normal;
+  padding: 15px 0;
+
+  // Left Section
+  .sec-left {
+    padding: 0;
+    float: none;
+    text-align: left;
+    
+    // Left Heading
+    h3 {
+      font-weight: bold;
+      font-size: 2.3em;
+      
+      // On Mobile
+      @media screen and (max-width: 767px) {
+        font-size: 1.5em;
+      }
+    }
+  }
+
+  // Right Section
+  .sec-right {
+    padding: 0;
+    float: none;
+    text-align: right;
+
+    h4 {
+      font-size: 2em;
+      
+      // On Mobile
+      @media screen and (max-width: 767px) {
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  h3, h4 {
+    margin: 0;
+  }
+
+  p {
+    margin: 5px 0 0;
+  }
+
+  // On Mobile
+  @media screen and (max-width: 767px) {
+    .sec-left {
+      text-align: center;
+      display: block !important;
+    }
+
+    .sec-right {
+      text-align: center;
+      display: block !important;
+      margin-top: 15px;
+    }
+
+    p {
+      margin-top: 5px;
+      
+      // On Mobile
+      @media screen and (max-width: 767px) {
+        font-size: 0.9em;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+// Title Section
+.title_sec {
+  background: $gray-x-dark;
+  color: $white;
+  padding: 20px 0;
+
+  &.white-bg {
+    color: $gray-x-dark;
+  }
+
+  &.gray-dim-bg {
+    color: $gray-x-dark;
+  }
+
+  &.transparent-bg {
+    background: transparent;
+    color: $white;
+  }
+
+  &.dashed_border {
+    border-bottom: 1px dashed $gray-x-dark;
+  }
+
+  // Breadcrumbs
+  .breadcrumb {
+    margin: 15px 0 0 0;
+    text-align: center;
+    
+    // On Desktops
+    @media screen and (min-width: 992px) {
+      background-color: transparent;
+      margin: -10px 0 0 0;
+      padding-top: 0;
+      padding-bottom: 20px;
+      text-align: left;
+    }
+
+    &.bg {
+      background: rgba($white, 0.3);
+      padding: 10px 15px;
+
+      li a {
+        color: rgba($white, 0.7);
+      }
+
+      li:before {
+        color: rgba($white, 0.8);
+      }
+
+      li.active {
+        color: rgba($white, 0.5);
+      }
+    }
+  }
+
+  // Main Section (contains left & right sections)
+  .main-sec {
+    display: table;
+
+    &.stick_lines {
+     
+      // On Desktop
+      @media screen and (min-width: 992px) {
+        width: auto;
+      }
+    }
+
+    p {
+      font-size: 1.2em;
+      
+      // On Mobile
+      @media screen and (max-width: 767px) {
+        font-size: 1em;
+      }
+    }
+
+    // Left Section
+    .left-sec {
+      display: table-cell;
+      vertical-align: middle;
+      padding: 0;
+      text-align: left;
+
+      // On Mobile/Tabs
+      @media screen and (max-width: 991px) {
+        float: none;
+        text-align: center;
+        display: block;
+      }
+    }
+
+    // Right Section
+    .right-sec {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: left;
+
+      // On Mobile/Tabs
+      @media screen and (max-width: 991px) {
+        float: none;
+        text-align: center;
+        display: block;
+      }
+    }
+  }
+}
+
+
+
+// Dashed Title Sec
+.dashed_title_sec {
+    
+  // Main Section
+  .main-sec {
+    border-top: 1px dashed $gray-x-dark;
+
+    h3 {
+      margin: 0;
+      padding: 20px 0;
+    }
+  }
+}
+
+
+
+
+// Lissting Grid
+.listing_grid {
+
+  // Listing Custom Padding
+  .listing_padding {
+    padding: 0 10px;
+  }
+}
+
+
+
+
+// Side Ribbon
+.side_ribbon {
+  position: absolute;
+  top: 10px;
+  left: -6px;
+  font-size: 14px;
+  padding: 3px 10px 3px 15px;
+  color: $white;
+  background: $material-teal;
+  text-transform: uppercase;
+  box-shadow: 3px 3px 3px -1px rgba($gray-x-dark, 0.5);
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    border-left: 3px solid transparent;
+    border-right: 3px solid $material-teal-dark;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid $material-teal-dark;
+  }
+}
+
+
+
+
+// Ribbon on listing Box
+.ribbon {
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+  text-align: right;
+
+  span {
+    font-size: 10px;
+    font-weight: bold;
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 20px;
+    transform: rotate(-45deg);
+    width: 100px;
+    display: block;
+    background: $material-teal;
+    box-shadow: 0 3px 10px -5px $gray-x-dark;
+    position: absolute;
+    top: 19px;
+    left: -21px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 100%;
+      z-index: -1;
+      border-left: 3px solid $material-teal-dark;
+      border-right: 3px solid transparent;
+      border-bottom: 3px solid transparent;
+      border-top: 3px solid $material-teal-dark;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 100%;
+      z-index: -1;
+      border-left: 3px solid transparent;
+      border-right: 3px solid $material-teal-dark;
+      border-bottom: 3px solid transparent;
+      border-top: 3px solid $material-teal-dark;
+    }
+  }
+}
+
+
+
+
+// Listing Items
+.listing_item {
+  border: 1px solid $gray-x-dark;
+  padding: 0;
+  margin-bottom: 20px;
+  margin-top: 10px;
+
+  // Hover Effects
+  &:hover {
+
+    // .listing_image img {
+    //   transform: scale(1.2);
+    //   transition: 0.3s all ease-in-out;
+    // }
+  }
+
+  // Listing Image
+  .listing_image {
+    position: relative;
+
+    a {
+      display: block;
+    }
+
+    img {
+      transition: 0.3s all ease-in-out;
+    }
+  }
+
+  // Listing Body
+  .listing_body {
+    max-height: 191px;
+    border-top: 1px solid $gray-x-dark;
+    position: relative;
+    background: $white;
+
+    // Details
+    .details {
+      padding: 15px 80px 15px 15px;
+    }
+
+    // Title
+    .title {
+      margin: 0 0 10px;
+      font-size: 16px;
+      line-height: 1.2em;
+    }
+
+    // Description
+    .desc {
+      font-size: 12px;
+      margin: 0;
+    }
+
+    // Extras
+    .extras {
+      margin-top: 10px;
+      margin-bottom: 0;
+      font-size: 12px;
+    }
+
+    // Price
+    .price {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+
+  // Listing Category (Veg. or Non-Veg.)
+  .listing_category {
+    height: 3px;
+
+    &.veg {
+      background: $material-green;
+    }
+
+    &.non-veg {
+      background: $material-red;
+    }
+  }
+
+  // Listing Footer
+  .listing_footer {
+    position: relative;
+    border-top: 1px solid $gray-x-dark;
+    background-color: $white;
+
+    .sec_table {
+      width: calc(100% + 1px);
+    }
+
+    // Social Buttons
+    .social {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: left;
+      width: 155px;
+
+      a {
+        border-right: 1px solid $gray-x-dark;
+        padding: 0 8px;
+        display: table-cell;
+
+        &.favourite {
+          background: $gray-x-dark;
+          
+          // When favourite class is passed (icon will be updated with red color)
+          i {
+            color: $white;
+          }
+
+          &:hover,
+          &:active,
+          &:focus {
+            opacity: 0.7;
+          }
+        }
+
+        i {
+          font-size: 18px;
+          line-height: 28px;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: $gray-x-dark;
+          color: $white;
+        }
+      }
+
+      span {
+        border-right: 1px solid $gray-x-dark;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 5px;
+        font-size: 12px;
+      }
+      
+      // Select Quantity Div
+      .quantity_select {
+        position: relative;
+        width: 35px;
+
+        &:after {
+          content: '\f35f';
+          font-family: 'Ionicons';
+          font-size: 1.2em;
+          color: $gray-x-dark;
+          position: absolute;
+          top: 52%;
+          transform: translateY(-50%);
+          right: 4px;
+          z-index: 1;
+        }
+      }
+
+      select {
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        height: auto;
+        display: table-cell;
+        box-shadow: none;
+        padding: 0 3px;
+        appearance: none;
+        position: relative;
+        background: rgba($white, 0.4);
+        z-index: 2;
+        width: 40px;
+      }
+    }
+
+    // Action Buttons
+    .action {
+      position: absolute;
+      right: 0;
+      width: calc(100% - 160px);
+      height: 100%;
+      font-size: 12px;
+      line-height: 1em;
+    }
+  }
+
+  // Social Dropdown Menu
+  .social_dropdown {
+    cursor: pointer;
+    display: table-cell;
+
+    &.open {
+
+      .share_popup {
+        background-color: $gray-x-dark;
+        color: $white;
+      }
+    }
+
+    // Share Icon Text
+    .share_popup {
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $gray-x-dark;
+        color: $white;
+      }
+
+      .txt {
+        border: none;
+        display: inline;
+        vertical-align: super;
+        padding-left: 0;
+
+        // On Tabs
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+          display: none;
+        }
+      }
+    }
+
+    // Dropdown Menu (Social Sharing)
+    .dropdown-menu {
+      top: auto;
+      left: -1px;
+      bottom: calc(100% + 1px);
+      min-width: 140px;
+      background-clip: border-box;
+      box-shadow: none;
+      background-color: $gray-x-dark;
+      border-radius: 0;
+      padding: 0;
+      margin: 0;
+
+      li {
+        display: table-cell;
+
+        a {
+          color: $white;
+          padding: 0;
+          width: 35px;
+          text-align: center;
+
+          &:hover,
+          &:active,
+          &:focus {
+            background-color: lighten($gray-x-dark, 20%);
+          }
+        }
+      }
+      
+      // Facebook Icon
+      .social_facebook:hover,
+      .social_facebook:active,
+      .social_facebook:focus {
+        color: #fff;
+        background-color: $color-facebook;
+      }
+
+      // Twitter Icon
+      .social_twitter:hover,
+      .social_twitter:active,
+      .social_twitter:focus {
+        color: #fff;
+        background-color: $color-twitter;
+      }
+
+      // Linkedin Icon
+      .social_linkedin:hover,
+      .social_linkedin:active,
+      .social_linkedin:focus {
+        color: #fff;
+        background-color: $color-linkedin;
+      }
+
+      // Instagram Icon
+      .social_instagram:hover,
+      .social_instagram:active,
+      .social_instagram:focus {
+        color: #fff;
+        background-color: $color-instagram;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+// Listing Deals
+.listing_deals {
+
+  .listing_item {
+
+    .listing_header {
+      background-color: $gray-x-dark;
+      color: $white;
+      padding: 15px 75px 15px 10px;
+      position: relative;
+      z-index: 2;
+
+      // Title
+      .title {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1em;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      // Price
+      .price {
+        position: absolute;
+        top: 12px;
+        right: 10px;
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0;
+      }
+    }
+
+    // Details
+    .details {
+      padding: 10px 15px;
+    }
+  }
+}
+
+
+
+
+
+
+
+// Breadcrumbs
+.breadcrumb_holder .breadcrumb {
+  margin-bottom: 0;
+}
+
+.breadcrumb {
+
+  &>li+li:before {
+    content: '\f3d3';
+    font-family: 'Ionicons';
+  }
+}
+
+
+
+
+
+
+
+// Block with Border
+.border-block {
+  border: 1px solid rgba($white, 0.7);
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  
+  // Black Border Block
+  &.black {
+    border-color: $gray-x-dark;
+  }
+  
+  // Dashed Border Block
+  &.dashed {
+    border-style: dashed;
+  }
+
+  // Block with Border (Blurred)
+  &.blurred {
+    border: 1px solid rgba($white, 0.7);
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      filter: blur(5px);
+      z-index: -1;
+    }
+  }
+}
+
+
+
+
+
+
+// Pagination
+.pagination {
+  
+  li {
+
+    a {
+      border-color: $gray-normal;
+      color: $gray-dark;
+
+      &:hover,
+      &:active,
+      &:focus {
+        border-color: $gray-normal;
+        color: $gray-x-dark;
+      }
+    }
+    
+    // For Disabled Buttons
+    &.disabled {
+
+      a {
+        color: $gray-normal;
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: $gray-normal;
+        }
+      }
+    }
+
+    // For Active Buttons
+    &.active {
+
+      a {
+        border-color: $gray-x-dark;
+        background: $gray-x-dark;
+        color: $white;
+
+        &:hover,
+        &:active,
+        &:focus {
+          border-color: $gray-x-dark;
+          background: $gray-x-dark;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.pagination>li:first-child>a, .pagination>li:first-child>span {
+  border-color: $gray-normal;
+  border-radius: 0;
+}
+
+.pagination>li:last-child>a, .pagination>li:last-child>span {
+  border-color: $gray-normal;
+  border-radius: 0;
+}
+
+
+
+
+
+
+
+
+
+
+// Alerts
+.alert {
+  border-radius: 0;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+}
+
+// Success
+.alert-success {
+  // border: 1px solid $material-green;
+  // color: $material-green;
+  // background-color: $material-green-bg;
+  // border-left-width: 15px;
+}
+
+// Info
+.alert-info {
+  // border: 1px solid $material-blue;
+  // color: $material-blue;
+  // background-color: $material-blue-bg;
+  // border-left-width: 15px;
+}
+
+// Warning
+.alert-warning {
+  // border: 1px solid $material-yellow;
+  // color: $material-yellow;
+  // background-color: $material-yellow-bg;
+  // border-left-width: 15px;
+}
+
+// Danger
+.alert-danger {
+  // border: 1px solid $material-red;
+  // color: $material-red;
+  // background-color: $material-red-bg;
+  // border-left-width: 15px;
+}
+
+
+
+
+
+
+
+
+// Noty Alerts
+.noty_bar {
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
+}
+
+.noty_message {
+  padding: 10px;
+}
+
+// Success
+.noty_type_success {
+  border: 1px solid #d6e9c6;
+  color: #3c763d;
+  background-color: #dff0d8;
+}
+
+// Information
+.noty_type_information {
+  border: 1px solid #bce8f1;
+  color: #31708f;
+  background-color: #d9edf7;
+}
+
+// Warning
+.noty_type_warning {
+  border: 1px solid #faebcc;
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+}
+
+// Error
+.noty_type_error {
+  border: 1px solid #ebccd1;
+  color: #a94442;
+  background-color: #f2dede;
+}
+
+
+
+
+
+
+
+
+
+
+// Accordian Click (Link)
+.accordian_link {
+  position: relative;
+  display: block;
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+  }
+  
+
+  // If White Link
+  &.white {
+    
+    &:hover,
+    &:active,
+    &:focus {
+      color: rgba($white, 0.8);
+    }
+  }
+  
+  // Arrow Down
+  &.arrow_down:after {
+    position: absolute;
+    top: -1px;
+    right: 0;
+    font-size: 1.4em;
+    content: '\f365';
+    font-family: 'Ionicons';
+    padding-left: 10px;
+  }
+  
+  // Arrow Up
+  &.collapsed:after {
+    position: absolute;
+    top: -1px;
+    right: 0;
+    font-size: 1.4em;
+    content: '\f35f';
+    font-family: 'Ionicons';
+    padding-left: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+// <hr>
+hr {
+  border-top: 1px solid $gray-x-dark;
+
+  // If Dotted
+  &.dotted {
+    border-top-style: dotted;
+  }
+  
+  // If 'white' class is selected
+  &.white {
+    border-color: rgba($white, 0.5);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// Bueno Form
+.bueno_form {
+  
+  // Help Block
+  .help-block {
+    padding: 0 10px;
+    font-style: italic;
+  }
+
+  // Input Type Button
+  .btn.form {
+    padding: 12px 30px;
+    font-size: 1.2em;
+  }
+}
+
+// Bueno Form Group
+.bueno_form_group {
+
+  label {
+    font-weight: normal;
+    color: $gray-x-dark;
+    padding: 0 12px;
+    margin-bottom: 10px;
+
+    // On Mobile
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
+  }
+
+  // Bordered Label
+  .label_inputtext {
+    border: 1px solid;
+    border-bottom: none;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 7px 10px;
+    text-align: left;
+  }
+  
+  // Select (Bueno Form)
+  .bueno_select.form {
+    padding: 0;
+
+    select {
+      background: transparent;
+      padding: 12px 20px 12px 12px;
+    }
+
+    .select2-container .select2-selection--single {
+      height: 50px;
+    }
+
+    .select2-selection__arrow {
+      height: 49px;
+    }
+
+    .select2-selection__rendered {
+      padding: 11px 20px 11px 12px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+// Validations
+// Error
+.has-error {
+
+  .bueno_inputtext {
+    border-color: $material-red-dark !important;
+  }
+}
+
+// Success
+.has-success {
+
+  .bueno_inputtext {
+    border-color: $material-green !important;
+  }
+}
+
+// Warning
+.has-warning {
+
+  .bueno_inputtext {
+    border-color: $yellow-normal !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+// Bueno Input Text
+.bueno_inputtext {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 14px 12px;
+  color: $white;
+  border: 1px solid rgba($white, 0.4);
+  height: auto;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border-color: rgba($white, 0.7);
+    box-shadow: none;
+    outline: none;
+  }
+
+  // If disabled
+  &:disabled {
+    background: $gray-bg;
+  }
+
+  // If black class is included
+  &.black {
+    border-color: $gray-x-dark;
+    color: $gray-x-dark;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: rgba($gray-x-dark, 0.4);
+    }
+  }
+
+  // If gray class is included
+  &.gray {
+    border-color: $gray-normal;
+    color: $gray-normal;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: rgba($gray-normal, 0.7);
+    }
+  }
+
+  // If Dashed class is included
+  &.dashed {
+    border-style: dashed;
+  }
+}
+
+
+
+
+// Bueno Input Text
+.bueno_inputgroup {
+
+  // Input Button
+  .input-group-btn {
+
+    button {
+      padding: 14px 10px;
+    }
+      
+    // Default Button
+    .btn-default {
+      border: 1px solid $gray-x-dark;
+      color: $gray-x-dark;
+
+      &:hover,
+      &:active,
+      &:focus {
+        border-color: rgba($gray-x-dark, 0.4);
+        color: rgba($gray-x-dark, 0.4);
+      }
+    }
+  }
+
+  // Input Group Button with icon
+  // If icon btn is on the right
+  &.icon_right {
+
+    input[type="text"] {
+      position: relative;
+    }
+
+    .input-group-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      .btn-default {
+        position: absolute;
+        right: 0;
+        border: none;
+        padding: 12px;
+
+        i {
+          font-size: 1.7em;
+          line-height: 0;
+        }
+      }
+    }
+  }
+  
+  // If icon btn is on the left
+  &.icon_left {
+
+    input[type="text"] {
+      position: relative;
+    }
+
+    .input-group-btn {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      .btn-default {
+        position: absolute;
+        left: 0;
+        border: none;
+        padding: 12px;
+
+        i {
+          font-size: 1.7em;
+          line-height: 0;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+// Bueno Select
+.bueno_select {
+  position: relative;
+  width: 100%;
+  margin-bottom: 0 !important;
+  font-weight: normal;
+  cursor: pointer;
+
+  select {
+    width: 100%;
+    border: 1px solid $gray-x-dark;
+    border-radius: 0;
+    box-shadow: none;
+    appearance: none;
+    padding: 5px 20px 6px 12px;
+    background: rgba($white, 0.4);
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: lighten($gray-x-dark, 10%);
+      outline: none;
+    }
+  }
+  
+  // If Select2 is there (Caret will not be displayed)
+  &.no_caret:after {
+    display: none;
+  }
+
+  // Dropdown Menu Icon
+  &:after {
+    content: '\f35f';
+    font-family: 'Ionicons';
+    font-size: 1.5em;
+    color: $gray-x-dark;
+    position: absolute;
+    top: 52%;
+    transform: translateY(-50%);
+    right: 22px;
+    z-index: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+// Well (Bootstrap)
+.well {
+  padding: 6px 15px;
+  text-transform: uppercase;
+  color: $white;
+  background: $gray-x-dark;
+  border-radius: 0;
+  border-color: $gray-x-dark;
+
+  a {
+    color: $white;
+    text-transform: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: rgba($white, 0.8);
+    }
+  }
+}
+
+
+
+
+
+
+
+// Gray BG
+.gray-bg {
+  background: $gray-normal;
+}
+
+// Gray Dim BG
+.gray-dim-bg {
+  background: $gray-light;
+}
+
+// White BG
+.white-bg {
+  background: $white;
+}
+
+
+
+
+
+
+
+
+// Dark Gray Text
+.text-gray-dark {
+  color: $gray-x-dark;
+}
+
+// Gray Text
+.text-gray {
+  color: rgba($white, 0.7);
+}
+
+// Yellow Text
+.text-yellow {
+  color: $yellow-normal;
+}
+
+// Yellow Text
+.text-white {
+  color: $white;
+}
+
+
+
+
+
+
+
+
+// Ponter Events None
+.pointer_events_none {
+  pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

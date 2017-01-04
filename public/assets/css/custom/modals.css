@@ -1,0 +1,8 @@
+.black_modal {
+  background-color: #231F20;
+  color: #FFFFFF;
+}
+
+.black_modal .modal-content {
+  border-radius: 20px;
+}

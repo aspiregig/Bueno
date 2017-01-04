@@ -1,0 +1,60 @@
+.img-responsive.product-img.avatar {
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.normal_height {
+    bottom: auto !important;
+    height: 100%;
+    position: absolute !important;
+}
+
+.normal_height_fix {
+    bottom: auto !important;
+    height: auto !important;
+    position: absolute !important;
+}
+
+.extra_height {
+    /*bottom: auto !important;*/
+    position: absolute !important;
+}
+
+#user-profile #content {
+    min-height: 1300px;
+}
+
+#user-profile .content-wrapper {
+    overflow: inherit;
+}
+
+/*
+#dashboard .main-sidebar,#form-product .main-sidebar,#datatables .main-sidebar  {
+    height: 100% !important;
+}*/
+
+table{
+    width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.3);
+}
+
+.query-single label{
+    padding-top: 0 !important;
+}
+
+.label-text label {
+    padding-top: 0px !important;
+}

@@ -1,0 +1,1 @@
+Welcome,{{$user->fullname}} to Bueno Kitchen !!

@@ -1,0 +1,1068 @@
+// ######################################## //
+// ## OVERRIDE.SCSS ## //
+// ######################################## //
+
+
+// Importing Variables
+@import "variables";
+
+
+
+
+// Font Family changed (whole site)
+* {
+	font-family: 'Roboto', 'Helvetica Neue', 'sans-serif';
+
+	// On text selection
+	&::selection {
+		background: $black;
+		color: $white;
+	}
+}
+
+
+
+
+
+// Container Width
+.container {
+
+	@media screen and (min-width: 1200px) {
+		width: 1000px;
+	}
+
+	// Container with less width
+	&.less {
+
+		@media screen and (min-width: 1200px) {
+			width: 1000px;
+		}
+	}
+
+	// Container with less width
+	&.more {
+
+		@media screen and (min-width: 1200px) {
+			width: 1170px;
+		}
+	}
+}
+
+
+
+
+// Custom Checkbox
+
+label {
+	cursor: pointer;
+	font-weight: normal;
+
+	// Left (checkbox on left)
+	&.left {
+		padding-left: 45px;
+
+		.check_style {
+			top: 1.5px;
+			left: 10px;
+		}
+
+		input[type="checkbox"] + .check_style:before,
+		input[type="checkbox"]:checked + .check_style:before {
+			font-size: 2.2em;
+		}
+	}
+	
+	// Large Font
+	&.large {
+		padding-left: 55px;
+
+		.txt {
+			font-size: 1.1em;
+			font-weight: bold;
+
+			.sub {
+				display: block;
+				font-size: 0.8em;
+				font-weight: normal;
+			}
+		}
+
+		.check_style {
+			top: 8px;
+		}
+
+		input[type="checkbox"] + .check_style:before,
+		input[type="checkbox"]:checked + .check_style:before {
+			font-size: 3em;
+		}
+	}
+
+	input[type="checkbox"] {
+		position: relative;
+		margin: -2px 0 0 0;
+		cursor: pointer;
+		display: none;
+	}
+
+	input[type="checkbox"].left_side {
+		margin-right: 5px;
+	}
+
+	input[type="checkbox"].right_side {
+		margin-left: 5px;
+	}
+}
+
+// Check Style
+.check_style {
+	position: absolute;
+	top: 1px;
+	right: 25px;
+}
+
+// To hide the checkbox itself
+label > input[type="checkbox"] + .check_style:before {
+	position: absolute;
+	background-color: $white;
+	height: 100%;
+	width: 100%;
+	font-size: 1.4em;
+	content: '\f372';
+	font-family: 'Ionicons';
+	display: inline-block;
+	letter-spacing: 10px;
+	line-height: 0.6em;
+}
+
+// Space between checkbox and label
+label > input[type="checkbox"]:checked + .check_style:before {
+	content: '\f373';
+	font-size: 1.2em;
+	font-family: 'Ionicons';
+	display: inline-block;
+	letter-spacing: 5px;
+	font-size: 1.4em;
+	line-height: 0.6em;
+}
+
+
+
+
+
+
+
+// Custom radio
+.radio {
+
+	label {
+		cursor: pointer;
+		font-weight: normal;
+
+		// Left (radio on left)
+		&.left {
+			padding-left: 45px;
+
+			.check_style {
+				top: 1.5px;
+				left: 10px;
+			}
+
+			input[type="radio"] + .check_style:before,
+			input[type="radio"]:checked + .check_style:before {
+				font-size: 2.2em;
+			}
+		}
+		
+		// Large Font
+		&.large {
+			padding-left: 55px;
+
+			.txt {
+				font-size: 1.1em;
+				font-weight: bold;
+
+				.sub {
+					display: block;
+					font-size: 0.8em;
+					font-weight: normal;
+				}
+			}
+
+			.check_style {
+				top: 8px;
+			}
+
+			input[type="radio"] + .check_style:before,
+			input[type="radio"]:checked + .check_style:before {
+				font-size: 3em;
+			}
+		}
+
+		input[type="radio"] {
+			position: relative;
+			margin: -2px 0 0 0;
+			cursor: pointer;
+			display: none;
+		}
+
+		input[type="radio"].left_side {
+			margin-right: 5px;
+		}
+
+		input[type="radio"].right_side {
+			margin-left: 5px;
+		}
+	}
+
+	// Check Style
+	.check_style {
+		position: absolute;
+		top: 1px;
+		right: 25px;
+	}
+
+	// To hide the radio itself
+	label > input[type="radio"] + .check_style:before {
+		position: absolute;
+		background-color: $white;
+		height: 100%;
+		width: 100%;
+		font-size: 1.4em;
+		content: '\f3a6';
+		font-family: 'Ionicons';
+		display: inline-block;
+		letter-spacing: 10px;
+		line-height: 0.6em;
+	}
+
+	// Space between radio and label
+	label > input[type="radio"]:checked + .check_style:before {
+		content: '\f3a7';
+		font-size: 1.2em;
+		font-family: 'Ionicons';
+		display: inline-block;
+		letter-spacing: 5px;
+		font-size: 1.4em;
+		line-height: 0.6em;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Range Slider
+.slider.slider-horizontal {
+	width: 100%;
+}
+
+// Slider Handle
+.slider-handle {
+	width: 10px;
+	height: 35px;
+	top: -8px;
+	background-color: $gray-x-dark;
+	background-image: none;
+}
+
+// Minimum (Left) Slider Handle
+.min-slider-handle {
+	margin-left: 0 !important;
+}
+
+// Handle (Bar)
+.slider-handle.bar {
+	border-radius: 10px;
+}
+
+// Slider Bar (Selected)
+.slider-selection {
+	background-image: none;
+	background-color: $gray-x-dark;
+	border-radius: 0;
+}
+
+// Slider Tracker
+.slider-track {
+	background-color: $gray-bg;
+	background-image: none;
+	border-radius: 0;
+	box-shadow: none;
+	border: 1px solid $gray-light;
+}
+
+// Custom Settings
+.custom_slider {
+	position: relative;
+	padding: 20px 0 30px;
+	
+	// Min. Range Show
+	.range_min {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		color: $gray-dark;
+	}
+
+	// Max. Range Show
+	.range_max {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		color: $gray-dark;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+/* hover style just for information */
+label:hover:before {
+  border: 1px solid $blue-normal !important;
+}
+
+// Overrding outline on all buttons
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+	outline: none !important;
+}
+
+
+// btn (Shadows and Outline Removed)
+.btn {
+	border-radius: 0;
+
+	&.disabled {
+		pointer-events: none;
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+		outline: none;
+		box-shadow: none;
+	}
+}
+
+
+// Primary btn active and focus hack
+.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary.focus, .open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover {
+	background-color: rgba($black, 0.7);
+}
+
+
+// Primary Button
+.btn-primary {
+	background-color: $black;
+	color: #fff;
+	padding: 6px 10px;
+  text-transform: uppercase;
+	border: 1px solid $black;
+  font-size: 14px;
+  transition: all 0.3s ease 0s;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: rgba($black, 0.7);
+		border: 1px solid $black;
+		color: #fff;
+    transition: all 0.3s ease 0s;
+	}
+}
+
+
+// Primary Button
+.btn-primary-inverse {
+	background-color: $white;
+	color: $black;
+	padding: 6px 10px;
+  text-transform: uppercase;
+	border: none;
+  font-size: 14px;
+  transition: all 0.3s ease 0s;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: rgba($white, 0.7);
+		color: $black;
+    transition: all 0.3s ease 0s;
+	}
+}
+
+
+// Primary Button
+.btn-primary-outline {
+	background-color: transparent;
+	color: $gray-x-dark;
+	padding: 6px 12px;
+  transition: all 0.3s ease 0s;
+  text-transform: uppercase;
+	border: 1px dashed $gray-x-dark;
+  font-size: 14px;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: transparent;
+		color: rgba($gray-x-dark, 0.5);
+		border-color: rgba($gray-x-dark, 0.5);
+    transition: all 0.3s ease 0s;
+	}
+}
+
+
+
+// Info Button
+.btn-icon {
+
+	// If icon on right
+	&.icon-right {
+		text-align: left;
+		position: relative;
+
+		i {
+			position: absolute;
+			top: 0;
+			right: 15px;
+			font-size: 1.55em;
+			line-height: 1.5em;
+		}
+	}
+
+	// If icon on left
+	&.icon-left {
+		text-align: right;
+		position: relative;
+
+		i {
+			position: absolute;
+			top: 0;
+			left: 15px;
+			font-size: 1.55em;
+			line-height: 1.5em;
+		}
+	}
+	
+	// If large button
+	&.btn-xlg {
+		
+		&.icon-left i,
+		&.icon-right i {
+			line-height: 1.7em;
+		}
+	}
+}
+
+
+
+// Info Button
+.btn-info {
+	background-color: $white;
+	color: $gray-x-dark;
+	padding: 6px 10px;
+  text-transform: uppercase;
+	border: 1px solid $black;
+  font-size: 14px;
+  transition: all 0.3s ease 0s;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: rgba($white, 0.7);
+		border-color: rgba($gray-x-dark, 0.6);
+		color: rgba($gray-x-dark, 0.6);
+    transition: all 0.3s ease 0s;
+	}
+
+	// If its with icon
+	&.icon {
+		text-align: left;
+		position: relative;
+
+		i {
+			position: absolute;
+			top: 0;
+			right: 15px;
+			font-size: 1.55em;
+			line-height: 1.5em;
+		}
+	}
+}
+
+// Btn Info (Hover/Active) Hack
+.btn-info.active.focus, .btn-info.active:focus, .btn-info.active:hover, .btn-info:active.focus, .btn-info:active:focus, .btn-info:active:hover, .open>.dropdown-toggle.btn-info.focus, .open>.dropdown-toggle.btn-info:focus, .open>.dropdown-toggle.btn-info:hover {
+	background-color: $white;
+	color: $gray-normal;
+	border-color: $gray-normal;
+}
+
+
+
+// Pink Info Icon Button
+.btn-pink {
+	background-color: $white;
+	color: $gray-x-dark;
+	padding: 6px 10px;
+  text-transform: uppercase;
+	border: 1px solid $black;
+  font-size: 14px;
+  transition: all 0.3s ease 0s;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: rgba($white, 0.7);
+		border-color: rgba($gray-x-dark, 0.6);
+		color: rgba($gray-x-dark, 0.6);
+    transition: all 0.3s ease 0s;
+	}
+
+	// If its with icon
+	&.icon {
+		text-align: left;
+		position: relative;
+
+		i {
+			position: absolute;
+			top: 0;
+			right: 15px;
+			font-size: 1.55em;
+			line-height: 1.5em;
+		}
+	}
+	
+
+	// When Item in Saved State
+	&.active {
+		color: $material-pink;
+		border: 1px solid $material-pink;
+		box-shadow: none;
+
+		&:hover,
+		&:active,
+		&:focus {
+			border-color: rgba($material-pink, 0.6);
+			color: rgba($material-pink, 0.6);
+	    transition: all 0.3s ease 0s;
+		}
+
+		&.icon {
+			text-align: left;
+			position: relative;
+
+			i {
+				color: $material-pink;
+				position: absolute;
+				top: 0;
+				right: 15px;
+				font-size: 1.55em;
+				line-height: 1.5em;
+			}
+		}
+	}
+}
+
+// Btn Pink Info Icon (Hover/Active) Hack
+.btn-pink.active.focus, .btn-pink.active:focus, .btn-pink.active:hover, .btn-pink:active.focus, .btn-pink:active:focus, .btn-pink:active:hover, .open>.dropdown-toggle.btn-pink.focus, .open>.dropdown-toggle.btn-pink:focus, .open>.dropdown-toggle.btn-pink:hover {
+	background-color: $white;
+	color: $gray-x-dark;
+	border-color: $gray-x-dark;
+}
+
+
+
+// Red Info Icon Button
+.btn-red {
+	background-color: $white;
+	color: $gray-x-dark;
+	padding: 6px 10px;
+  text-transform: uppercase;
+	border: 1px solid $black;
+  font-size: 14px;
+  transition: all 0.3s ease 0s;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: rgba($white, 0.7);
+		border-color: rgba($gray-x-dark, 0.6);
+		color: rgba($gray-x-dark, 0.6);
+    transition: all 0.3s ease 0s;
+	}
+
+	// If its with icon
+	&.icon {
+		text-align: left;
+		position: relative;
+
+		i {
+			position: absolute;
+			top: 0;
+			right: 15px;
+			font-size: 1.55em;
+			line-height: 1.5em;
+		}
+	}
+	
+
+	// When Item in Saved State
+	&.active {
+		color: $material-red-dark;
+		border: 1px solid $material-red-dark;
+		box-shadow: none;
+
+		&:hover,
+		&:active,
+		&:focus {
+			border-color: rgba($material-red-dark, 0.6);
+			color: rgba($material-red-dark, 0.6);
+	    transition: all 0.3s ease 0s;
+		}
+
+		&.icon {
+			text-align: left;
+			position: relative;
+
+			i {
+				color: $material-red-dark;
+				position: absolute;
+				top: 0;
+				right: 15px;
+				font-size: 1.55em;
+				line-height: 1.5em;
+			}
+		}
+	}
+}
+
+// Btn Red Info Icon (Hover/Active) Hack
+.btn-red.active.focus, .btn-red.active:focus, .btn-red.active:hover, .btn-red:active.focus, .btn-red:active:focus, .btn-red:active:hover, .open>.dropdown-toggle.btn-red.focus, .open>.dropdown-toggle.btn-red:focus, .open>.dropdown-toggle.btn-red:hover {
+	background-color: $white;
+	color: $gray-x-dark;
+	border-color: $gray-x-dark;
+}
+
+
+
+// Green Info Icon Button
+.btn-green {
+	background-color: $white;
+	color: $gray-x-dark;
+	padding: 6px 10px;
+  text-transform: uppercase;
+	border: 1px solid $black;
+  font-size: 14px;
+  transition: all 0.3s ease 0s;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: rgba($white, 0.7);
+		border-color: rgba($gray-x-dark, 0.6);
+		color: rgba($gray-x-dark, 0.6);
+    transition: all 0.3s ease 0s;
+	}
+
+	// If its with icon
+	&.icon {
+		text-align: left;
+		position: relative;
+
+		i {
+			position: absolute;
+			top: 0;
+			right: 15px;
+			font-size: 1.55em;
+			line-height: 1.5em;
+		}
+	}
+	
+
+	// When Item in Saved State
+	&.active {
+		color: $material-green;
+		border: 1px solid $material-green;
+		box-shadow: none;
+
+		&:hover,
+		&:active,
+		&:focus {
+			border-color: rgba($material-green, 0.6);
+			color: rgba($material-green, 0.6);
+	    transition: all 0.3s ease 0s;
+		}
+
+		&.icon {
+			text-align: left;
+			position: relative;
+
+			i {
+				color: $material-green;
+				position: absolute;
+				top: 0;
+				right: 15px;
+				font-size: 1.55em;
+				line-height: 1.5em;
+			}
+		}
+	}
+}
+
+// Btn Green Info Icon (Hover/Active) Hack
+.btn-green.active.focus, .btn-green.active:focus, .btn-green.active:hover, .btn-green:active.focus, .btn-green:active:focus, .btn-green:active:hover, .open>.dropdown-toggle.btn-green.focus, .open>.dropdown-toggle.btn-green:focus, .open>.dropdown-toggle.btn-green:hover {
+	background-color: $white;
+	color: $gray-x-dark;
+	border-color: $gray-x-dark;
+}
+
+
+// Warning Button
+.btn-warning {
+	background-color: $yellow-normal;
+	color: $black;
+	padding: 6px 10px;
+  text-transform: uppercase;
+	border: none;
+  font-size: 14px;
+  transition: all 0.3s ease 0s;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: adjust-hue($yellow-normal, 5%);
+		color: $black;
+    transition: all 0.3s ease 0s;
+	}
+}
+
+
+// Default Button
+.btn-default {
+	background-color: transparent;
+	color: rgba($gray-x-dark, 0.7);
+	padding: 6px 10px;
+  text-transform: uppercase;
+	border: 1px solid rgba($gray-x-dark, 0.4);
+  font-size: 14px;
+  transition: all 0.3s ease 0s;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: transparent;
+		color: $gray-x-dark;
+		border-color: rgba($gray-x-dark, 0.7);
+    transition: all 0.3s ease 0s;
+	}
+}
+
+
+// Default Inverse Button
+.btn-default-inverse {
+	background-color: transparent;
+	color: rgba($white, 0.7);
+	padding: 6px 10px;
+  text-transform: uppercase;
+	border: 1px solid rgba($white, 0.4);
+  font-size: 14px;
+  transition: all 0.3s ease 0s;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: transparent;
+		color: $white;
+		border-color: rgba($white, 0.7);
+    transition: all 0.3s ease 0s;
+	}
+}
+
+
+// Banner CTA
+.banner_cta {
+	background-color: $black;
+	color: #fff;
+	padding: 8px 30px;
+	border-radius: 0;
+	text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: lighten($black, 20%);
+		color: #fff;
+    transition: all 0.3s ease 0s;
+	}
+}
+
+
+// Secondary Button (Self-Made)
+.btn-secondary {
+	background-color: transparent;
+	color: $gray-x-dark;
+	padding: 8px 30px;
+	border: 1px solid $gray-x-dark;
+  transition: all 0.3s ease 0s;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: transparent;
+		color: lighten($gray-x-dark, 25%);
+		border: 1px solid lighten($gray-x-dark, 25%);
+    transition: all 0.3s ease 0s;
+	}
+}
+
+
+// Text Link (all links with class 'default-links')
+a {
+	color: $gray-x-dark;
+	text-decoration: none;
+	transition: all 0.1s ease-in-out;
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: rgba($gray-x-dark, 0.7);
+		text-decoration: none;
+		transition: all 0.1s ease-in-out;
+	}
+}
+
+
+// Btn Link
+.btn-link {
+	color: $gray-x-dark;
+	text-decoration: none;
+	transition: all 0.1s ease-in-out;
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: rgba($gray-x-dark, 0.7);
+		text-decoration: none;
+		transition: all 0.1s ease-in-out;
+	}
+
+	// Gray Color
+	&.gray {
+		color: $gray-normal;
+		text-decoration: none;
+		transition: all 0.1s ease-in-out;
+
+		&:hover,
+		&:active,
+		&:focus {
+			text-decoration: underline;
+			transition: all 0.1s ease-in-out;
+		}
+	}
+}
+
+
+
+
+// Large Button
+.btn-xlg {
+	padding: 12px;
+	font-size: 1.5em;
+
+	// On Mobile
+	@media screen and (max-width: 767px) {
+		font-size: 1.1em;
+		padding: 10px;
+	}
+}
+
+
+// Input Button (when disabled)
+.btn.disabled,
+.btn[disabled] {
+	opacity: 0.45 !important;
+}
+
+
+
+
+// Panels
+.panel {
+	border-radius: 0;
+	border-color: $gray-x-dark;
+	
+	// Panel Heading
+	.panel-heading {
+		border-color: $gray-x-dark;
+		border-radius: 0;
+	}
+
+	// If 'dashed' class is included
+	&.dashed {
+		border-style: dashed;
+
+		.panel-heading {
+			border-style: dashed;
+		}
+	}
+
+	// If 'black' class is included
+	&.black {
+
+		.panel-heading {
+			background-color: $gray-x-dark;
+			color: $white;
+		}
+	}
+
+}
+
+.panel-group .panel {
+	border-radius: 0;
+
+	.panel-body {
+		border-color: $gray-x-dark;
+	}
+}
+
+.panel-default>.panel-heading+.panel-collapse>.panel-body {
+	border-top-color: $gray-x-dark;
+}
+
+
+
+// Select2 Custom Styles
+.select2-container--default .select2-selection--single {
+	border-radius: 0;
+	border-color: $gray-x-dark;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.modal {
+	
+	.select2-container {
+		width: 100% !important;
+	}
+}
+
+.select2-dropdown {
+	border-radius: 0 !important;
+	border: 1px solid rgba($white, 0.4);
+}
+
+.select2-container .select2-selection--single {
+	height: 34px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+		padding: 2px 20px 1px 12px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+	height: 30px;
+	width: 35px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+	border-color: $gray-x-dark transparent transparent transparent ;
+	border-width: 8px 6px 0 6px;
+	margin-top: -4px;
+}
+
+.select2-container.select2-container--open {
+	// overflow: no-scroll;
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+	border-color: transparent transparent $gray-x-dark transparent;
+	border-width: 0 6px 8px 6px;
+	margin-top: -4px;
+}
+
+.select2-container--open .select2-dropdown--below,
+.select2-container--open .select2-dropdown--above {
+	border-radius: 0;
+	border-color: $gray-x-dark;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field:focus {
+	outline: none;
+	border: 1px solid $gray-x-dark;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+	background: $gray-x-dark;
+}
+
+
+
+
+
+// Owl Carousel
+.owl-carousel .owl-wrapper-outer {
+
+	.ribbon {
+		left: -6px;
+		top: -6px;
+	}
+
+	.side_ribbon {
+		left: -7px;
+		font-size: 11px;
+	}
+}
+
+
+
+// Display - NONE
+.display_none {
+	display: none;
+}
+
+// Visibility Hidden
+.visibility_hidden {
+	visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

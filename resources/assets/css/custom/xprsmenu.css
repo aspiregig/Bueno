@@ -1,0 +1,97 @@
+.catering_sec {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url("../images/catering/catering_bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 767px) {
+  .catering_sec {
+    padding-top: 40px;
+  }
+}
+
+.catering_sec .catering_menu_sec {
+  padding: 40px 0 100px;
+  background: transparent;
+}
+
+@media screen and (max-width: 767px) {
+  .catering_sec .catering_menu_sec {
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .catering_sec .catering_menu_sec .catering_menu {
+    padding: 0;
+  }
+}
+
+.catering_sec .catering_menu_sec .catering_menu_left {
+  vertical-align: top;
+}
+
+@media screen and (min-width: 992px) {
+  .catering_sec .catering_menu_sec .catering_menu_left {
+    padding: 0 20px;
+  }
+}
+
+.catering_sec .catering_menu_sec .catering_menu_left h4 {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 767px) {
+  .catering_sec .catering_menu_sec .catering_menu_left h4 {
+    font-size: 1.2em;
+    line-height: 1.2em;
+    text-align: center;
+  }
+}
+
+.catering_sec .catering_menu_sec .border-block {
+  font-size: 1.3em;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+@media screen and (min-width: 1025px) {
+  .catering_sec .catering_menu_sec .btn {
+    font-size: 1.4em;
+    padding: 10px 15px;
+  }
+}
+
+.catering_query {
+  background: transparent;
+  padding-top: 30px;
+}
+
+.catering_query .catering_menu_sec {
+  padding-top: 0;
+}
+
+.catering_query .catering_menu {
+  color: #231F20;
+}
+
+.catering_query .catering_menu .catering_menu_left {
+  color: #231F20;
+}
+
+.catering_query .catering_menu .catering_menu_right {
+  color: #231F20;
+  vertical-align: top;
+}
+
+@media screen and (min-width: 992px) {
+  .catering_query .catering_menu .catering_menu_right {
+    padding-left: 40px;
+  }
+}
+
+.catering_query .catering_menu .catering_menu_right .border-block {
+  color: #231F20;
+  border-color: #231F20;
+}

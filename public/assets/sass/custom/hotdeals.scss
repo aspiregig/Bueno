@@ -1,0 +1,364 @@
+// ######################################## //
+// ## HOTDEALS.SCSS ## //
+// ######################################## //
+
+
+// Importing Variables
+@import "variables";
+
+
+// Hot Deals Listing Section
+.hot_deals_listing_sec {
+	padding: 0 0 30px;
+	
+	// Hot Deals Title
+	.title_sec.white-bg {
+		
+		// On Desktop
+		@media screen and (min-width: 1200px) {
+			padding: 0;
+		}
+
+		.style_header_loud {
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+	}
+
+	// Listings on Hot Deals Page
+	.listing_deals .listing_item {
+		margin-bottom: 30px;
+
+		// Social Dropdown Menu
+		.social_dropdown {
+			cursor: pointer;
+			display: table-cell;
+
+			&.open {
+
+				.share_popup {
+					background-color: $gray-x-dark;
+					color: $white;
+				}
+			}
+
+			// Share Icon Text
+			.share_popup {
+
+				&:hover,
+				&:active,
+				&:focus {
+					background-color: $gray-x-dark;
+					color: $white;
+				}
+
+				.txt {
+					border: none;
+					display: inline;
+					vertical-align: super;
+					padding-left: 0;
+
+					// On Tabs
+					@media screen and (min-width: 768px) and (max-width: 991px) {
+						display: none;
+					}
+				}
+			}	
+		}
+
+		// Dropdown Position
+		.dropdown-menu {
+			top: auto;
+			bottom: calc(100% + 1px);
+			min-width: 140px;
+			background-clip: border-box;
+			box-shadow: none;
+			background-color: $gray-x-dark;
+			border-radius: 0;
+			padding: 0;
+			margin: 0;
+
+			li {
+				display: table-cell;
+
+				a {
+					color: $white;
+					padding: 0;
+					width: 35px;
+					text-align: center;
+
+					&:hover,
+					&:active,
+					&:focus {
+						background-color: lighten($gray-x-dark, 20%);
+					}
+				}
+			}
+			
+			// Facebook Icon
+			.social_facebook:hover,
+			.social_facebook:active,
+			.social_facebook:focus {
+				color: #fff;
+			  background-color: $color-facebook;
+			}
+
+			// Twitter Icon
+			.social_twitter:hover,
+			.social_twitter:active,
+			.social_twitter:focus {
+			  color: #fff;
+			  background-color: $color-twitter;
+			}
+
+			// Linkedin Icon
+			.social_linkedin:hover,
+			.social_linkedin:active,
+			.social_linkedin:focus {
+				color: #fff;
+			  background-color: $color-linkedin;
+			}
+
+			// Instagram Icon
+			.social_instagram:hover,
+			.social_instagram:active,
+			.social_instagram:focus {
+				color: #fff;
+			  background-color: $color-instagram;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+// Hot Deals (Secondary Title)
+.deals_title {
+	margin: 0 25px 30px;
+	padding: 30px 15px;
+
+	// On Mobile
+	@media screen and (max-width: 767px) {
+		margin: 0 0 30px;
+	}
+	
+	.right-sec {
+
+		// On Tabs & Mobile
+		@media screen and (max-width: 991px) {
+			padding: 0 10px;
+		}
+	}
+
+	.deals_nav {
+		text-align: right;
+
+		.btn {
+			font-size: 12px;
+			margin-left: 10px;
+
+			// On Mobile
+			@media screen and (max-width: 767px) {
+				display: block;
+				margin-top: 10px;
+				margin-left: 0;
+			}
+		}
+
+		// On Tabs & Mobile
+		@media screen and (max-width: 991px) {
+			text-align: center;
+			margin-top: 20px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+// Hot Deals Listing Show
+// Listing Show
+.listing_show {
+	padding: 0 0 60px;
+	
+	// Left Section (Meal Image)
+	.meal_pic {
+		padding: 0 10px;
+
+		// Image Holder
+		.img_holder {
+			position: relative;
+		}
+
+		// On Mobile
+		@media screen and (max-width: 767px) {
+			margin-bottom: 15px;
+		}
+
+		// Meal Social Share
+		.meal_social_share {
+			list-style: none;
+			padding: 0;
+			margin-top: 15px;
+
+			// On Mobile
+			@media screen and (max-width: 767px) {
+				margin-bottom: 0;
+			}
+
+			li {
+				border: 1px solid $gray-normal;
+				display: inline-block;
+				text-align: center;
+				width: 40px;
+				padding: 5px 0;
+				line-height: 1em;
+				margin-right: 10px;
+				cursor: pointer;
+
+				// On Mobile
+				@media screen and (max-width: 767px) {
+					width: 30px;
+					padding: 3px 0;
+				}
+
+				&:hover,
+				&:active,
+				&:active {
+					border-color: transparent;
+				}
+
+				a {
+					color: inherit;
+					width: 100%;
+					transition: all 0.1s ease-in-out;
+				}
+
+				i {
+					font-size: 2em;
+
+					// On Mobile
+					@media screen and (max-width: 767px) {
+						font-size: 1.5em;
+					}
+				}
+			}
+		}
+	}
+
+	// Right Section (Meal Details)
+	.meal_details {
+		padding: 0 10px;
+
+		// Meal Title
+		.title {
+			margin: 0;
+		}
+
+		// Meal Price
+		.price {
+			font-size: 24px;
+			font-weight: 500;
+		}
+
+		// Extras
+		.extras {
+			margin: 15px 0;
+		}
+
+		// Quantity Select
+		.bueno_select {
+
+			&:after {
+				font-size: 2em;
+			}
+
+			select {
+				padding: 9px 20px 9px 12px;
+			}
+
+			.select2-selection__arrow {
+				height: 42px;
+			}
+
+			.select2-container .select2-selection--single {
+				height: 42px;
+			}
+
+			.select2-selection__rendered {
+				padding: 6px 20px 6px 12px;
+			}
+		}
+
+		// Left Button Section
+		.left_btn_sec {
+			
+			// On Desktops
+			@media screen and (max-height: 992px) {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+
+		// Right Validation Section
+		.right_validation_sec {
+			
+			// On Desktops
+			@media screen and (max-height: 992px) {
+				padding-right: 0;
+			}
+		}
+
+		// CTA (Submit - Add to Cart)
+		.btn {
+			padding: 10px 12px;
+		}
+
+		// btn with icon
+		.btn.icon i {
+			line-height: 1.9em;
+		}
+
+		// Help Block (Validation)
+		.help-block {
+			margin-top: 10px;
+		}
+		
+		// Meal Category (Veg. & Non-Veg)
+		.meal_category {
+			height: 8px;
+			margin: 8px 0;
+			
+			// If Veg
+			&.veg {
+				background-color: $material-green;
+			}
+
+			// Else Non-Veg
+			&.non-veg {
+				background-color: $material-red;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+

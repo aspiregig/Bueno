@@ -1,0 +1,51 @@
+// ######################################## //
+// ## CART.SCSS ## //
+// ######################################## //
+
+
+// Importing Variables
+@import "variables";
+
+
+// Cart Section
+.saved_sec {
+	padding-top: 0;
+	
+	// Action Btns
+	.saved_actions {
+		margin-top: 20px;
+		padding: 0;
+		margin-bottom: 30px;
+
+		.btn {
+			padding: 12px 50px;
+
+			@media screen and (max-width: 767px) {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

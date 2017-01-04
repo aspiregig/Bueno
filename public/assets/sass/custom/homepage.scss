@@ -1,0 +1,470 @@
+// ######################################## //
+// ## HOMEPAGE.SCSS ## //
+// ######################################## //
+
+
+// Importing Variables
+@import "variables";
+
+
+// Header Carousel Section
+#mainCarouselSection {
+	padding: 0;
+	background-color: $gray-x-dark;
+}
+
+
+
+// Coupon Code (Text)
+.coupon_code {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+
+
+
+// Highlight Navigation Section
+.highlight_nav_sec {
+	padding-top: 10px;
+	padding-bottom: 0;
+}
+
+// Highlight Menu
+.highlight_nav {
+	padding: 0;
+
+	// Inner Menu
+	.highlight_menu {
+		color: $black;
+		text-align: center;
+		padding: 15px 15px 10px;
+		transition: 0.2s all ease-in-out;
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: rgba($black, 0.6);
+			transition: 0.2s all ease-in-out;
+		}
+
+		// If this menu (mav) is active
+		&.active {
+			color: $gray-normal;
+		}
+
+		h3 {
+			font-family: Besom;
+			font-weight: bold;
+			font-size: 5em;
+			line-height: 0.8em;
+			margin: 0;
+		}
+
+		p {
+			margin: 0;
+		}
+
+		// All childs except last should have (right) border
+		&:nth-child(n) {
+			border-right: 1px dashed rgba($black, 0.7);
+		}
+
+		// Last child should have no borders
+		&:last-child {
+			border: none;
+		}
+
+		// On Mobile
+		@media screen and (max-width: 767px) {
+
+			// All childs except last should have (bottom) borders
+			&:nth-child(n) {
+				border-bottom: 1px dashed rgba($black, 0.7);
+				border-right: none;
+			}
+
+			// Last child should have no borders
+			&:last-child {
+				border: none;
+			}
+		}
+	}
+}
+
+
+
+// Highlight Active Section
+.highlight_active_sec {
+	display: none;
+	margin-top: 10px;
+	background: $gray-light;
+	
+	// With 'show' class this div will be visible
+	&.show_sec {
+		display: block;
+	}
+
+	.locality_form {
+
+		// On Mobile
+		@media screen and (max-width: 767px) {
+			text-align: center;
+		}
+		
+		input[type="submit"] {
+			padding: 6px 48px;
+
+			// On Mobile
+			@media screen and (max-width: 767px) {
+				margin-top: 15px;
+			}
+		}
+	}
+}
+
+
+
+
+
+// Xprs Menu Section
+.xprs_menu_sec {
+	background: $gray-x-dark !important;
+	
+	// Select Menu (Full Width)
+	.select2-container {
+		width: 100% !important;
+	}
+
+	// Locality Form
+	.locality_form {
+		
+		// Changing Label Color to White
+		.bueno_form_group .control-label {
+			color: $white;
+		}
+
+		// Changing Button to White
+		.btn-primary-outline {
+			border-color: $white;
+			color: $white;
+
+			&:hover,
+			&:active,
+			&:focus {
+				opacity: 0.7;
+				border-color: $white;
+				color: $white;
+			}
+		}
+	}
+
+	// (Category Chooser)
+	.category_chooser {
+		margin-top: 30px;
+		
+		// Chooser Menu
+		.chooser {
+			padding: 0 30px;
+			border-right: 1px dashed $white;
+
+			// On Mobile
+			@media screen and (max-width: 767px) {
+				padding: 30px 15px;
+				border-right: none;
+				border-bottom: 1px dashed $white;
+			}
+
+			// On Tabs
+			@media screen and (min-width: 768px) and (max-width: 991px) {
+				padding: 0 20px;
+			}
+
+			// Removed Border from last child
+			&:last-child {
+				border-right: none;
+
+				// On Mobile
+				@media screen and (max-width: 767px) {
+					border-bottom: none;
+				}
+			}
+
+			// Title
+			h3 {
+				font-family: 'Besom';
+				font-size: 7em;
+				line-height: 0.8em;
+				color: $white;
+
+				// On Tabs
+				@media screen and (min-width: 768px) and (max-width: 991px) {
+					font-size: 5em;
+				}
+
+				// On Mobile
+				@media screen and (max-width: 767px) {
+					font-size: 5em;
+				}
+
+				span {
+					font-family: 'Besom';
+					font-size: 0.8em;
+				}
+			}
+
+			// Select
+			.bueno_select {
+				font-weight: normal;
+			}
+		}
+	}
+}
+
+// Locality Form
+.locality_form {
+	
+	// Alignment of
+	.bueno_form_group .control-label {
+
+		// On Mobile
+		@media screen and (max-width: 767px) {
+			text-align: center !important;
+		}
+	}
+}
+
+
+
+
+
+
+
+// Catering Menu Section
+.catering_menu_sec {
+	padding: 100px 0;
+	background-color: $gray-x-dark;
+
+	// On Mobile
+	@media screen and (max-width: 767px) {
+		padding: 60px 0;
+	}
+	
+	// Catering Menu Section Holder
+	.catering_menu {
+		display: table;
+
+		// Catering Menu (Left Section)
+		.catering_menu_left {
+			color: $white;
+			text-align: left;
+
+			// On Mobile
+			@media screen and (max-width: 767px) {
+				margin-bottom: 30px;
+			}
+
+			h3 {
+				font-size: 11em;
+
+				// On Tabs
+				@media screen and (min-width: 768px) and (max-width: 991px) {
+					font-size: 7em;
+				}
+
+				// On Mobile
+				@media screen and (max-width: 767px) {
+					font-size: 5em;
+				}
+
+				span {
+					font-family: 'Besom';
+				}
+			}
+		}
+
+		// Catering Menu (Right Section)
+		.catering_menu_right {
+
+			// On Mobile
+			@media screen and (max-width: 767px) {
+				padding: 0;
+			}
+
+			.border-block {
+				color: $white;
+
+				label {
+					display: block;
+					font-weight: normal;
+					margin-bottom: 5px;
+				}
+			}
+
+			.btn-primary-inverse {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+// Special Banner
+.special_banner {
+	margin-bottom: 10px;
+	
+	// Main Banner Image
+	.special_image {
+		position: relative;
+		border-bottom: 5px solid $black;
+		margin: 0 auto;
+		height: 280px;
+		background-position: center !important;
+		background-size: cover !important;
+		background-repeat: no-repeat !important;
+
+		// On Mobile
+		@media screen and (max-width: 767px) {
+			height: 170px;
+		}
+	}
+	
+	// Banner Title
+	.banner_title {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 30px;
+		color: $white;
+		margin: 0;
+		width: 250px;
+		line-height: 1.2em;
+
+		// On Mobile
+		@media screen and (max-width: 767px) {
+			width: 210px !important;
+			left: 15px !important;
+			top: 20% !important;
+			transform: none !important;
+			font-size: 1.5em;
+		}
+	}
+
+	// Banner Subtitle
+	.banner_subtitle {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 30px;
+		color: $white;
+		margin: 0;
+		width: 250px;
+		line-height: 0.9em;
+
+		small {
+			color: rgba($white, 0.8);
+			margin-top: 3px;
+		}
+	}
+
+	// Banner CTA
+	.banner_cta {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+
+
+
+
+// Deals Section
+.deals_sec {
+	padding-top: 10px;
+}
+
+
+// Meal Crousel Section
+.meal_carousel_sec {
+	padding: 60px 0;
+}
+
+
+
+
+
+
+// Testimonial Section
+.testimonials_sec {
+	padding: 60px 0;
+
+	// Testimonial Holder
+	.testimonial_holder {
+		display: table;
+
+		// Left Section
+		.left-sec {
+			text-align: left;
+		}
+
+		// Right Section
+		.right-sec {
+			text-align: left;
+			vertical-align: top;
+			padding-top: 15px;
+		}
+	}
+
+	// User Details
+	.user {
+		
+		// User's Name
+		.name {
+			font-size: 3em;
+			margin: 0;
+			padding: 10px 0;
+			text-transform: uppercase;
+			color: $gray-dark;
+		}
+
+		// Testimonial Info
+		.info {
+			border-top: 1px solid $gray-x-dark;
+			font-style: italic;
+			padding-top: 10px;
+			color: $gray-normal;
+		}
+	}
+
+	// Testimonial
+	.testimonial {
+		padding-left: 50px;
+		color: darken($gray-normal, 20%);
+
+		// On Mobile
+		@media screen and (max-width: 767px) {
+			padding-left: 0;
+		}
+
+		p {
+			margin: 0;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
